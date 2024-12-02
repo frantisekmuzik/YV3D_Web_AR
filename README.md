@@ -4,7 +4,7 @@
 
 
 # Web AR knihovny
-### [Threej.js](https://threejs.org/) + [AR.js](https://ar-js-org.github.io/AR.js-Docs/)
+### [Three.js](https://threejs.org/) + [AR.js](https://ar-js-org.github.io/AR.js-Docs/)
 - **Popis:** AR.js je open-source knihovna postavená na Three.js a umožňuje markerless AR pomocí WebXR API
 
 - **Funkce:**
@@ -24,7 +24,7 @@
 - **Popis:** A-Frame je framework založený na HTML a Three.js pro tvorbu VR/AR aplikací, který podporuje WebXR
 
 - **Funkce:**
-    - jednoduchý zápis AR scény pomocí HTML značek (<a -scene>) 
+    - jednoduchý zápis AR scény pomocí HTML značek (```<a-scene>```) 
     - podpora markerless AR pomocí WebXR
 
 - **Výhody:**
@@ -72,7 +72,7 @@
 - **Použití:** pro vývoj aplikací s nízkými nároky na výkon
 
 # WebXR API
-- WebXR (Web Extended Reality) je API pro webové prohlížeče, které umožňuje vytvářet aplikace využívající rozšířenou (AR) a virtuální realitu (VR) přímo na webu
+- WebXR (Web Extended Reality) je API pro webové prohlížeče, které umožňuje vytvářet aplikace využívající rozšířenou (**AR**) a virtuální realitu (**VR**) **přímo na webu**
 
 - **Hlavní vlastnosti:**
     - rozšířená podpora zařízení:
@@ -86,6 +86,19 @@
     - jednotný přístup:
         - nabízí jednotné API pro interakci s VR i AR technologiemi, což vývojářům zjednodušuje práci
 
+## [Model-viewer](https://modelviewer.dev/)
+- ```<model-viewer>``` je webová komponenta vyvinutá Googlem, která umožňuje snadné zobrazování 3D modelů a integraci rozšířené reality (AR) do webových stránek
+- je navržena tak, aby byla jednoduchá na použití a zároveň poskytovala pokročilé možnosti renderování a interakce
+
+- tato technologie využívá WebGL pro vykreslování 3D grafiky a WebXR (pokud je dostupné) pro funkce AR, což umožňuje uživatelům snadno zobrazovat a manipulovat s 3D objekty ve webovém prohlížeči
+
+- **Hlavní vlastnosti:**
+    - Používá se jako HTML značka (podobně jako ```<img>```), což umožňuje vložit 3D model do webové stránky bez potřeby pokročilého programování
+
+    - ukázka: ```<model-viewer src="model.glb" alt="3D model" auto-rotate camera-controls ar></model-viewer>```
+    - podpora formátu GLTF/GLB
+    - interaktivní ovládání - rotace, zoom, posun
+    - zobrazení modelu v mobilu i v AR
 
 # Úloha 1 - Markerless AR
 
