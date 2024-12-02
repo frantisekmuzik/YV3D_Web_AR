@@ -1,4 +1,4 @@
-# YV3D_Web_AR
+# Rozšířená realita na webu
 
 ## [Prezentace](https://docs.google.com/presentation/d/1wiN_Lsa_bpyaS2wpj8AHzXRh36euV2b-tfG8Oa_SC6I/edit?usp=sharing)
 
