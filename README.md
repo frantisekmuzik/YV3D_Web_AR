@@ -71,7 +71,7 @@
 
 - **Použití:** pro vývoj aplikací s nízkými nároky na výkon
 
-# WebXR API
+# [WebXR API](https://immersiveweb.dev/)
 - WebXR (Web Extended Reality) je API pro webové prohlížeče, které umožňuje vytvářet aplikace využívající rozšířenou (**AR**) a virtuální realitu (**VR**) **přímo na webu**
 
 - **Hlavní vlastnosti:**
@@ -102,8 +102,15 @@
 
 # Úloha 1 - Markerless AR
 
+1. načtení model vieweru
+2. výměna základního modelu za náš model + zapnutí AR
+3. přidání popisu a html textu 
+4. vytvoření prohlížečky modelů s jejich přepínáním tlačítkem
+5. vytvoření hlavního menu s 3 tlačítky - modely vedle sebe, jeden moden (AR), druhý model (AR)
+
 # Úloha 2 - Marker AR
 
+- přidání čtvrtého tlačítka do hlavního menu pro marker AR
 
 # Užitečné odkazy
 - Glitch: https://glitch.com/
