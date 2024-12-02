@@ -102,7 +102,27 @@
 
 # Úloha 1 - Markerless AR
 
-1. načtení model vieweru
+### [1. Vytvoření základní webové stránky](https://github.com/frantisekmuzik/YV3D_Web_AR/commit/a0d136780f44140ba0ed448cc353d65aa49e1fe8)
+
+- základní prázdná stránka s textem
+
+![](/img/img01.png)
+
+### [2. Připojení model-vieweru](https://github.com/frantisekmuzik/YV3D_Web_AR/commit/c06e6d360b79d4638ff96d34bc899ef46d65d0d4)
+
+- ze stránky [model-vieweru](https://modelviewer.dev/) se zkopíruje *Quick Start* 
+
+- instalace komponentu se vloží ke skriptu
+
+- zobrazení modelu do ```body```
+
+- výměna cesty k modelu ```src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" ```
+
+- odstranění ```enviroment image```
+
+![](/img/img02.png)
+
+
 2. výměna základního modelu za náš model + zapnutí AR
 3. přidání popisu a html textu 
 4. vytvoření prohlížečky modelů s jejich přepínáním tlačítkem
