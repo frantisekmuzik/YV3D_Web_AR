@@ -1,40 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-    <title>YV3D WebAR</title>
-
-    <!-- Připojení js souboru pro případné scripty -->
-    <script src="/script.js" defer></script>
-
-    <!-- Připojení knihovny A-Frame -->
-    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-
-    <!-- Připojení knihovny MindAR -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Image Tracking with Layers</title>
+    
+    <!-- A-Frame library -->
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    
+    <!-- MindAR.js for image tracking -->
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-  </head>
-  <body>
-    <!-- Komponent knihovny A-Frame -->
-    <a-scene mindar-image="imageTargetSrc: https://cdn.glitch.global/e29771ef-3772-4695-9359-807af99f3512/targets.mind?v=1733245907571;"
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        #slider-container {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+        }
+
+        input[type=range] {
+            width: 100%;
+            height: 30px; /* Zvýšení výšky slideru */
+            background: #09764;
+            border-radius: 5px;
+            outline: none;
+            padding: 5px 0;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px; /* Velikost knoflíku */
+            height: 25px; /* Velikost knoflíku */
+            background: #09764; /* Barva knoflíku */
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        input[type=range]::-moz-range-thumb {
+            width: 25px; /* Velikost knoflíku */
+            height: 25px; /* Velikost knoflíku */
+            background: #09764; /* Barva knoflíku */
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #layerTitle {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <a-scene mindar-image="imageTargetSrc: https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/targets.mind?v=1729682202530;"
               color-space="sRGB"
               renderer="colorManagement: true; physicallyCorrectLights: true"
               vr-mode-ui="enabled: false"
               device-orientation-permission-ui="enabled: false">
-      
-      <a-assets>
-        <!-- Mapové vrstvy v AR -->
-        <img id="img4" src="https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/mapa-rozvoj-1830-1919-v4-removebg-preview.png?v=1729684205204" style="display: none;">
-      </a-assets>
+              
+        <a-assets>
+            <!-- 10 Layer images -->
+            <img id="img1" src="https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/mapa-rozvoj-1830-1839-v4-removebg-preview.png?v=1729684186938" style="display: none;">
+            <img id="img2" src="https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/mapa-rozvoj-1830-1849-v4-removebg-preview.png?v=1729684189036" style="display: none;">
+            <img id="img3" src="https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/mapa-rozvoj-1830-1859-v4-removebg-preview.png?v=1729684191210" style="display: none;">
+            <img id="img4" src="https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/mapa-rozvoj-1830-1869-v4-removebg-preview.png?v=1729684193313" style="display: none;">
+            <img id="img5" src="https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/mapa-rozvoj-1830-1879-v4-removebg-preview.png?v=1729684196093" style="display: none;">
+            <img id="img6" src="https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/mapa-rozvoj-1830-1889-v4-removebg-preview.png?v=1729684198140" style="display: none;">
+            <img id="img7" src="https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/mapa-rozvoj-1830-1899-v4-removebg-preview.png?v=1729684200546" style="display: none;">
+            <img id="img8" src="https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/mapa-rozvoj-1830-1909-v4-removebg-preview.png?v=1729684202988" style="display: none;">
+            <img id="img9" src="https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/mapa-rozvoj-1830-1919-v4-removebg-preview.png?v=1729684205204" style="display: none;">
+            <img id="img10" src="https://cdn.glitch.global/18d2a813-f0f3-4cae-989e-9b93ca230ede/mapa-rozvoj-1830-1929-v4-removebg-preview.png?v=1729683675601" style="display: none;">
+        </a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      
-        <!-- Nastavení parametrů mapových vrstev v AR -->
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane id="vrstva4" src="#img4" transparent="true" alphatest="0.1" opacity="1" position="0 0 0" rotation="0 0 0" width="1" height="0.707"></a-plane>
-      </a-entity> 
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+        <!-- Image target entity -->
+        <a-entity mindar-image-target="targetIndex: 0">
+            <!-- 10 Layer planes -->
+            <a-plane id="vrstva1" src="#img1" transparent="true" alphatest="0.1" opacity="0" position="0 0 0" rotation="0 0 0" width="1" height="0.707"></a-plane>
+            <a-plane id="vrstva2" src="#img2" transparent="true" alphatest="0.1" opacity="0" position="0 0 0" rotation="0 0 0" width="1" height="0.707"></a-plane>
+            <a-plane id="vrstva3" src="#img3" transparent="true" alphatest="0.1" opacity="0" position="0 0 0" rotation="0 0 0" width="1" height="0.707"></a-plane>
+            <a-plane id="vrstva4" src="#img4" transparent="true" alphatest="0.1" opacity="0" position="0 0 0" rotation="0 0 0" width="1" height="0.707"></a-plane>
+            <a-plane id="vrstva5" src="#img5" transparent="true" alphatest="0.1" opacity="0" position="0 0 0" rotation="0 0 0" width="1" height="0.707"></a-plane>
+            <a-plane id="vrstva6" src="#img6" transparent="true" alphatest="0.1" opacity="0" position="0 0 0" rotation="0 0 0" width="1" height="0.707"></a-plane>
+            <a-plane id="vrstva7" src="#img7" transparent="true" alphatest="0.1" opacity="0" position="0 0 0" rotation="0 0 0" width="1" height="0.707"></a-plane>
+            <a-plane id="vrstva8" src="#img8" transparent="true" alphatest="0.1" opacity="0" position="0 0 0" rotation="0 0 0" width="1" height="0.707"></a-plane>
+            <a-plane id="vrstva9" src="#img9" transparent="true" alphatest="0.1" opacity="0" position="0 0 0" rotation="0 0 0" width="1" height="0.707"></a-plane>
+            <a-plane id="vrstva10" src="#img10" transparent="true" alphatest="0.1" opacity="0" position="0 0 0" rotation="0 0 0" width="1" height="0.707"></a-plane>
+        </a-entity>
     </a-scene>
-  </body>
+
+    <!-- Slider for layer selection -->
+    <div id="slider-container">
+        <div id="layerTitle">Year: 1840</div>
+        <input type="range" min="1" max="9" value="1" id="layerSlider">
+    </div>
+
+    <script>
+        // Get references to the layer planes
+        const layers = [];
+        for (let i = 1; i <= 10; i++) {
+            layers.push(document.querySelector(`#vrstva${i}`));
+        }
+      
+        // Get reference to the title div
+        const layerTitle = document.getElementById('layerTitle');
+
+        // Array of years corresponding to the layers
+        const layerYears = [1840, 1850, 1860, 1870, 1880, 1890, 1900, 1910, 1920, 1930];
+
+        // Function to show selected layer and update title
+        function showLayer(layerNumber) {
+            // Set all layers to invisible
+            layers.forEach(layer => layer.setAttribute('opacity', '0'));
+
+            // Show only the selected layer
+            layers[layerNumber - 1].setAttribute('opacity', '1');
+
+            // Update the title with the corresponding year
+            layerTitle.innerText = 'Year: ' + layerYears[layerNumber - 1];
+        }
+
+        // Event listener for the slider
+        document.getElementById('layerSlider').addEventListener('input', function(event) {
+            const selectedLayer = parseInt(event.target.value, 11);
+            showLayer(selectedLayer);
+        });
+
+        // Initially show the first layer
+        showLayer(1);
+    </script>
+</body>
 </html>
