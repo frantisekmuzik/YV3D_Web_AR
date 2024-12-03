@@ -145,7 +145,7 @@
 
 ### [0. Vytvoření rozcestníku na stránkce - dvě tlačítka (kostel + mapa)](https://github.com/frantisekmuzik/YV3D_Web_AR/commit/a69e7fde810a729d2ee962d1189967f1c25f4703)
 
-- vytvoření nového skripu (např. ```kostel.html```)a překopírování současného html kódu do něj
+- vytvoření nového skripu (např. ```kostel.html```) a překopírování současného html kódu do něj
 
 - z původního skriptu odmazat součásti body a vložit dvě tlačítka
 
@@ -154,6 +154,16 @@
 - tlačítka se upraví pomocí css
 
 ![](/img/img05.png)
+
+### [1. Přidání knihoven A-Frame a MindAR do skriptu](https://github.com/frantisekmuzik/YV3D_Web_AR/commit/1bae8a4a4871b0763c8ab20d29ae1f6df52e1877)
+
+- instalace *A-Frame Image Tracking* z odkazu https://hiukim.github.io/mind-ar-js-doc/installation
+
+- vložení startovacího skriptu https://hiukim.github.io/mind-ar-js-doc/quick-start/overview
+
+- nutno opravit ukončení tagu ```</a-gltf-model>```
+
+- odstranění části připojující css skript (není potřeba)
 
 # Užitečné odkazy
 - Glitch: https://glitch.com/
