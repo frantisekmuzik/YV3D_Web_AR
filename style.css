@@ -1,0 +1,35 @@
+/* Nastavení body pro celý html soubor */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Nadpis */
+  h1 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Popisný text */
+  p {
+    margin: 10px 0 20px;
+    text-align: center;
+    max-width: 600px;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Nastavení model-viewer */
+  model-viewer {
+    width: 80%;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+  }
+  
