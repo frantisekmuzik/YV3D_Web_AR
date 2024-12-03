@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>YV3D WebAR</title>
+
+    <!-- Připojení js souboru pro případné scripty -->
+    <script src="/script.js" defer></script>
+
+    <!-- Načtení komponentu modelviewer -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+
+    <!-- Nastavení stylu stránky -->
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body>
+    <!-- Nadpis -->
+    <h1>Zaniklý kostel na Zhůří u Čachrova</h1>
+    
+    <!-- Odstavce s popisem modelu -->
+    <p>
+      Kostel Nejsvětější Trojice byl postaven v roce 1762 (podle jiných údajů
+      1761) na místě bývalé kaple, která zde stála již v roce 1684. Kostel byl
+      vysvěcen v roce 1763 a v roce 1766 došlo k založení farnosti. Matriky jsou
+      vedeny od roku 1784. K rozšíření kostela došlo v roce 1793 a v roce 1809
+      kostel vyhořel – jednalo se pravděpodobně ještě o dřevěnou stavbu. Na
+      náklad majitele bystřického panství hraběte P. Gundelfingena byl nově „z
+      kamene vystavěn“.
+    </p>
+
+    <p>
+      Při prudké přestřelce na konci 2. světové války (5. 5. 1945) mezi
+      americkými a německými vojáky, byla zničena střecha kostela. Ta byla po
+      válce obnovena a bohoslužby se tady konaly až do dubna roku 1952. Pak celé
+      území pohltil Vojenský újezd Dobrá Voda a došlo k úplné likvidaci celé
+      obce. Na místě kostela byla vystavěná nová kaple a opět zasvěcena
+      Nejsvětější Trojici. K slavnostnímu vysvěcení došlo 3. října 1999.
+    </p>
+    
+    <!-- Přidání zdroje textu včetně hypertextového odkazu -->
+    <small>Zdroj textu: <a href="https://kaplicky.cesty.in/zhuri">https://kaplicky.cesty.in/zhuri</a></small> 
+
+    <!-- modelviewer element -->
+    <model-viewer
+      alt="Kostel na Zhůří"
+      src="https://cdn.glitch.global/e29771ef-3772-4695-9359-807af99f3512/Kostel.glb?v=1733221492095"
+      ar
+      shadow-intensity="1"
+      camera-controls
+      touch-action="pan-y"
+    ></model-viewer>
+  </body>
+</html>
