@@ -193,7 +193,7 @@
     - ```<a-camera>``` zůstane beze změny
     - do ```<a-entity>``` se vloží informace o zobrazovatelné vrstvě, opacity=1
 
-### [5. Přidání více mapových vrstev a slideru pro jejich měnění]()
+### [5. Přidání více mapových vrstev a slideru pro jejich měnění](https://github.com/frantisekmuzik/YV3D_Web_AR/commit/b0ba841d112d3e48c54e32d217b91a3a7f75552e)
 
 - přenastavení průhlednosti vrstvy: opacity=0
 
