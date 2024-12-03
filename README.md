@@ -165,6 +165,24 @@
 
 - odstranění části připojující css skript (není potřeba)
 
+### 2. Vytvoření podkladové značky pro uchycení obrazu
+
+- z rastru mapy, která slouží jako podklad pro uchycení AR se vytvoří *Image Target* s využitím nástroje https://hiukim.github.io/mind-ar-js-doc/tools/compile
+
+- **pro podkladovou mapu i vizualizované vrsty je nutné zachovat stejný rozsah (velikost) a poměr stran** - nunto připravit v GIS dopředu
+
+- pomocí nástroje *Image Targets Compiler* se vytvořila příprava pro uchycení AR v několika měřítkách včetně zobrazení ukotvujích bodů
+
+![](/img/img06.png)
+
+- následně se stáhne zkompilovaný soubor ```targets.mind```, který se využije v dalším kroku
+
+- značka se nahraje do složky *Assets* do Glitche
+
+### [3. Vložení targetu a jedné mapové vrstvy v AR]()
+
+- 
+
 # Užitečné odkazy
 - Glitch: https://glitch.com/
 - ChatGPT: https://chatgpt.com/
