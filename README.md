@@ -123,7 +123,21 @@
 ![](/img/img02.png)
 
 
-2. výměna základního modelu za náš model + zapnutí AR
+### [3. Výměna modelu za vlastní](https://github.com/frantisekmuzik/YV3D_Web_AR/commit/b4af3e55047cd09ce40a02315265579672ebd306)
+
+- připravený model ve formátu *.glb* se importuje do složky *Assets* v Glitch
+ 
+- po uploadu modelu se zkopíruje jeho URL a ve skriptu se nahradí původní model astronauta
+
+![](/img/img03.png)
+
+
+### [4. Grafická úprava stránky]()
+
+- stránka se upraví tak, aby obsahovala nadpis, popis modelu a prohlížení modelu
+
+- okno s prohlížením modelu by mělo být zvětšené (editace stylu/css)
+
 3. přidání popisu a html textu 
 4. vytvoření prohlížečky modelů s jejich přepínáním tlačítkem
 5. vytvoření hlavního menu s 3 tlačítky - modely vedle sebe, jeden moden (AR), druhý model (AR)
