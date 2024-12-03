@@ -165,6 +165,8 @@
 
 - odstranění části připojující css skript (není potřeba)
 
+- nyní lze otestovat zkušební vizitku z odkazu výše
+
 ### 2. Vytvoření podkladové značky pro uchycení obrazu
 
 - z rastru mapy, která slouží jako podklad pro uchycení AR se vytvoří *Image Target* s využitím nástroje https://hiukim.github.io/mind-ar-js-doc/tools/compile
@@ -179,9 +181,28 @@
 
 - značka se nahraje do složky *Assets* do Glitche
 
-### [3. Vložení targetu a jedné mapové vrstvy v AR]()
+### [3. Vložení vlastního image targetu](https://github.com/frantisekmuzik/YV3D_Web_AR/commit/333f28769e23a02463bd2f2c39d51c3ffe8b6ca6)
 
-- 
+- nastavení cesty pro nový *Image Target* -> při vyzkoušení se přes mapu zobrazí defaultní model v AR
+
+### [4. Pročištění kódu a vložení jedné mapové vrstvy](https://github.com/frantisekmuzik/YV3D_Web_AR/commit/eee3184771576bc85c54a51a9e55210571ba813a)
+
+- odstranění nepotřebného kódu:
+    - výměna obrázku ```img``` (mapové vrsty) v ```<a-assets>```
+    - do ```<a-assets>``` vložit pouze řádek připojující mapu *"mapa-rozvoj-1830-1929-v4.png"* - ten je nahraný ve složce *Assets*
+    - ```<a-camera>``` zůstane beze změny
+    - do ```<a-entity>``` se vloží informace o zobrazovatelné vrstvě, opacity=1
+
+### [5. Přidání více mapových vrstev a slideru pro jejich měnění]()
+
+- přenastavení průhlednosti vrstvy: opacity=0
+
+- vložení více vrstev
+
+- přidání slideru včetně cyklu pro procházení vrstev
+
+- úprava css stylu
+
 
 # Užitečné odkazy
 - Glitch: https://glitch.com/
