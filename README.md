@@ -132,11 +132,13 @@
 ![](/img/img03.png)
 
 
-### [4. Grafická úprava stránky]()
+### [4. Grafická úprava stránky](https://github.com/frantisekmuzik/YV3D_Web_AR/commit/30b7c5b8b67fe4da5ef3b6565bdb1c92949da99f)
 
 - stránka se upraví tak, aby obsahovala nadpis, popis modelu a prohlížení modelu
 
 - okno s prohlížením modelu by mělo být zvětšené (editace stylu/css)
+
+![](/img/img03.png)
 
 3. přidání popisu a html textu 
 4. vytvoření prohlížečky modelů s jejich přepínáním tlačítkem
