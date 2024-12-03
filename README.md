@@ -138,7 +138,7 @@
 
 - okno s prohlížením modelu by mělo být zvětšené (editace stylu/css)
 
-![](/img/img03.png)
+![](/img/img04.png)
 
 3. přidání popisu a html textu 
 4. vytvoření prohlížečky modelů s jejich přepínáním tlačítkem
