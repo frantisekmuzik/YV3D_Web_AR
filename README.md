@@ -140,13 +140,20 @@
 
 ![](/img/img04.png)
 
-3. přidání popisu a html textu 
-4. vytvoření prohlížečky modelů s jejich přepínáním tlačítkem
-5. vytvoření hlavního menu s 3 tlačítky - modely vedle sebe, jeden moden (AR), druhý model (AR)
 
 # Úloha 2 - Marker AR
 
-- přidání čtvrtého tlačítka do hlavního menu pro marker AR
+### [0. Vytvoření rozcestníku na stránkce - dvě tlačítka (kostel + mapa)](https://github.com/frantisekmuzik/YV3D_Web_AR/commit/a69e7fde810a729d2ee962d1189967f1c25f4703)
+
+- vytvoření nového skripu (např. ```kostel.html```)a překopírování současného html kódu do něj
+
+- z původního skriptu odmazat součásti body a vložit dvě tlačítka
+
+- dále se vytvoří nový skript ```mapa.html``` se základní strukturou pro druhou úlohu
+
+- tlačítka se upraví pomocí css
+
+![](/img/img05.png)
 
 # Užitečné odkazy
 - Glitch: https://glitch.com/
