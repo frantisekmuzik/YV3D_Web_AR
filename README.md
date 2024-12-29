@@ -59,7 +59,7 @@
 - **Použití:** pro profesionální a komerční AR aplikace
 
 ### [MindAR](https://hiukim.github.io/mind-ar-js-doc/)
-- **Popis:** nenáročná knihovna zaměřená na markerless AR
+- **Popis:** nenáročná knihovna zaměřená na marker AR
 
 - **Funkce:**
     - podpora detekce 2D obrazů a povrchů
